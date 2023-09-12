@@ -6,7 +6,7 @@
 /*   By: artclave <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:51:26 by artclave          #+#    #+#             */
-/*   Updated: 2023/09/12 05:40:25 by artclave         ###   ########.fr       */
+/*   Updated: 2023/09/12 16:44:23 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_sort_conversion_type(void *variable, char id, int *i)
 {
 	int	n;
+
 	n = 0;
 	if (id == 'c')
 		n = ft_putchar((char)variable);
@@ -28,6 +29,6 @@ int	ft_sort_conversion_type(void *variable, char id, int *i)
 		n = ft_unsdigit((unsigned int)variable);
 	else if (id == 'x' || id == 'X')
 		n = ft_hex_dec((int)variable, id);
-	*i = *i +  2;
+	*i = *i + 2;
 	return (n);
 }
