@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_conversion_type.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artclave <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: arturo <arturo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:51:26 by artclave          #+#    #+#             */
-/*   Updated: 2023/09/12 16:44:23 by artclave         ###   ########.fr       */
+/*   Updated: 2024/06/19 18:56:04 by arturo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ int	ft_sort_conversion_type(void *variable, char id, int *i)
 
 	n = 0;
 	if (id == 'c')
-		n = ft_putchar((char)variable);
+		n = ft_putchar(*(char *)variable);
 	else if (id == 's')
 		n = ft_putstr((char *)variable);
 	else if (id == 'p')
 		n = ft_hex_ptr(variable);
 	else if (id == 'd' || id == 'i')
-		n = ft_digit((int)variable);
+		n = ft_digit(*(int *)variable);
 	else if (id == 'u')
-		n = ft_unsdigit((unsigned int)variable);
+		n = ft_unsdigit(*(unsigned int *)variable);
 	else if (id == 'x' || id == 'X')
-		n = ft_hex_dec((int)variable, id);
+		n = ft_hex_dec(*(int *)variable, id);
 	*i = *i + 2;
 	return (n);
 }
